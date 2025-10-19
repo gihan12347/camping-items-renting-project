@@ -16,6 +16,8 @@ const Navbar = () => {
   const [cartItems, setCartItems] = useState([]);
   const [showCartModal, setShowCartModal] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
 
   useEffect(() => {
     setMounted(true);
@@ -37,6 +39,18 @@ const Navbar = () => {
 
   const getTotalPrice = () => {
     return cartItems.reduce((total, item) => total + (item.pricePerDay || 0), 0);
+  };
+
+  const getTodayDate = () => {
+    return new Date().toISOString().split('T')[0];
+  };
+
+    const getDaysCount = () => {
+    if (!startDate || !endDate) return 0;
+    
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+    return Math.max(1, Math.ceil((end - start) / (1000 * 60 * 60 * 24)) + 1);
   };
 
   return (
@@ -235,6 +249,55 @@ const Navbar = () => {
 
               {/* Cart Items */}
               <div className="flex-1 overflow-y-auto p-6 space-y-4">
+                {/* Rental Period Section */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-amber-400/30 space-y-3">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <svg
+                      className="h-5 w-5 text-amber-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+                    <h3 className="text-white font-semibold">Rental Period</h3>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-xs text-gray-300 mb-1">Start Date</label>
+                      <input
+                        type="date"
+                        value={startDate}
+                        min={getTodayDate()}
+                        onChange={(e) => setStartDate(e.target.value)}
+                        className="w-full bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-gray-300 mb-1">End Date</label>
+                      <input
+                        type="date"
+                        value={endDate}
+                        min={startDate || getTodayDate()}
+                        onChange={(e) => setEndDate(e.target.value)}
+                        className="w-full bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-between pt-2 border-t border-white/10">
+                    <span className="text-sm text-gray-300">Total Duration:</span>
+                    <span className="text-amber-300 font-semibold">
+                      {getDaysCount()} {getDaysCount() === 1 ? "day" : "days"}
+                    </span>
+                  </div>
+                </div>
                 {cartItems.length === 0 ? (
                   <div className="flex flex-col items-center justify-center h-full text-center">
                     <div className="bg-white/5 p-8 rounded-full mb-4">
