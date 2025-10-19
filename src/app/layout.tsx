@@ -32,3 +32,12 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+//Readonly<{
+//  children: React.ReactNode;
+
+// A TypeScript type annotation. 
+// It says children can be any renderable React
+// content (text, elements, fragments, etc.), 
+// and Readonly makes the props object immutable inside the function.
