@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useState } from "react";
-import ProductCard from "./components/ProductCard.js";
+import ProductCard from "./components/productCard.js";
 import HeaderSection from "./components/headerSection.js";
 import NavBar from "./components/navbar.js";
 import rentalProducts from "./components/rentalProducts.js";
