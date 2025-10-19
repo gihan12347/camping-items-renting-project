@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
 import { useState } from "react";
-import ProductCard from "./components/ProductCard";
-import HeaderSection from "./components/HeaderSection";
-import NavBar from "./components/NavBar";
+import ProductCard from "./components/ProductCard.js";
+import HeaderSection from "./components/headerSection.js";
+import NavBar from "./components/navbar.js";
 import rentalProducts from "./components/rentalProducts.js";
-import LocateUs from "./components/location";
-import ImageGallery from "./components/gallery";
-import Footer from "./components/footer";
+import LocateUs from "./components/location.js";
+import ImageGallery from "./components/gallery.js";
+import Footer from "./components/footer.js";
 
 export default function Home() {
   const [cartUpdated, setCartUpdated] = useState(0);
