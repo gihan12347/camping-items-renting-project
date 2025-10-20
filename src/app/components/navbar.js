@@ -5,12 +5,12 @@ import { useState, useEffect } from "react";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Gear Rentals", href: "/rentals" },
+  { name: "Gear Rentals", href: "/gear-rental" },
   { name: "Destinations", href: "/destinations" },
   { name: "About Us", href: "/about" },
 ];
 
-const Navbar = () => {
+const Navbar = ({ activeLink = "Home"}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [cartItems, setCartItems] = useState([]);
@@ -45,7 +45,7 @@ const Navbar = () => {
     return new Date().toISOString().split('T')[0];
   };
 
-    const getDaysCount = () => {
+  const getDaysCount = () => {
     if (!startDate || !endDate) return 0;
     
     const start = new Date(startDate);
@@ -96,12 +96,20 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="relative px-4 py-2 text-gray-100 hover:text-amber-300 text-base font-semibold transition-all duration-200 group"
+                  className={`relative px-4 py-2 text-base font-semibold transition-all duration-200 group ${
+                    activeLink === link.name
+                      ? "text-amber-300"
+                      : "text-gray-100 hover:text-amber-300"
+                  }`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <span className="relative z-10">{link.name}</span>
-                  <div className="absolute inset-0 bg-white/5 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-200"></div>
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-3/4 transition-all duration-300"></div>
+                  <div className={`absolute inset-0 bg-white/5 rounded-lg transition-transform duration-200 ${
+                    activeLink === link.name ? "scale-100" : "scale-0 group-hover:scale-100"
+                  }`}></div>
+                  <div className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-amber-400 to-orange-500 transition-all duration-300 ${
+                    activeLink === link.name ? "w-3/4" : "w-0 group-hover:w-3/4"
+                  }`}></div>
                 </Link>
               ))}
             </nav>
@@ -180,7 +188,11 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block text-gray-200 hover:text-amber-300 hover:bg-white/10 px-4 py-3 rounded-lg text-base font-semibold transition-all duration-200 border-l-4 border-transparent hover:border-amber-400"
+                className={`block px-4 py-3 rounded-lg text-base font-semibold transition-all duration-200 border-l-4 ${
+                  activeLink === link.href
+                    ? "text-amber-300 bg-white/10 border-amber-400"
+                    : "text-gray-200 hover:text-amber-300 hover:bg-white/10 border-transparent hover:border-amber-400"
+                }`}
               >
                 {link.name}
               </Link>
