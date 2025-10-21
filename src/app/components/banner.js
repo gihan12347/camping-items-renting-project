@@ -1,13 +1,11 @@
 import { MessageCircle } from "lucide-react";
+import { WhatsAppNumber, WhatsAppMessage } from "./util.js";
 
 export default function NaturesNestBanner() {
-  const whatsappNumber = "1234567890"; // Replace with your actual WhatsApp number
-  const whatsappMessage =
-    "Hi! I'm interested in renting camping equipment from Nature's Nest.";
 
   const handleWhatsAppClick = () => {
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-      whatsappMessage
+    const url = `https://wa.me/${WhatsAppNumber}?text=${encodeURIComponent(
+      WhatsAppMessage
     )}`;
     window.open(url, "_blank");
   };

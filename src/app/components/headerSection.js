@@ -4,11 +4,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { ChevronDown, MessageCircle } from 'lucide-react';
-
-const WHATSAPP_NUMBER = '94770000000';
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Hello Nature Nest Camping, I'd like to inquire about renting some gear for my trip in Down South!"
-);
+import { WhatsAppNumber, WhatsAppMessage } from "./util.js";
 
 const backgroundImages = [
   '/images/camping-hero-1.png',
@@ -76,7 +72,7 @@ export default function Hero() {
         </p>
 
         <a
-          href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+          href={`https://wa.me/${WhatsAppNumber}?text=${WhatsAppMessage}`}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center space-x-2 px-8 py-3 bg-green-500 text-white font-bold text-lg rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-105"

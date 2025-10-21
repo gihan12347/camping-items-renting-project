@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import AlertModal from "./alert.js";
+import { WhatsAppNumber, WhatsAppMessage } from "./util.js";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -10,7 +12,7 @@ const navLinks = [
   { name: "About Us", href: "/about" },
 ];
 
-const Navbar = ({ activeLink = "Home"}) => {
+const Navbar = ({ activeLink = "Home" }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [cartItems, setCartItems] = useState([]);
@@ -18,12 +20,13 @@ const Navbar = ({ activeLink = "Home"}) => {
   const [mounted, setMounted] = useState(false);
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => {
     setMounted(true);
     const cart = JSON.parse(localStorage.getItem("item-in-cart") || "[]");
     setCartItems(cart);
-    
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
@@ -38,19 +41,50 @@ const Navbar = ({ activeLink = "Home"}) => {
   };
 
   const getTotalPrice = () => {
-    return cartItems.reduce((total, item) => total + (item.pricePerDay || 0), 0);
+    return cartItems.reduce(
+      (total, item) => total + (item.pricePerDay || 0),
+      0
+    );
   };
 
   const getTodayDate = () => {
-    return new Date().toISOString().split('T')[0];
+    return new Date().toISOString().split("T")[0];
   };
 
   const getDaysCount = () => {
     if (!startDate || !endDate) return 0;
-    
+
     const start = new Date(startDate);
     const end = new Date(endDate);
     return Math.max(1, Math.ceil((end - start) / (1000 * 60 * 60 * 24)) + 1);
+  };
+
+  const handleWhatsAppClick = (e) => {
+    e.preventDefault();
+
+    if (!startDate || !endDate) {
+      setShowAlert(true);
+      return;
+    }
+
+    let msg =`${WhatsAppMessage}\n\n`;
+    msg += `Rental Period: ${startDate} to ${endDate} for the (${getDaysCount()} days)\n\n`;
+    msg += "Items:\n";
+    cartItems.forEach((item, index) => {
+      msg += `${index + 1}. ${item.name || "Product"} - LKR ${(
+        item.pricePerDay || 0
+      ).toFixed(2)} per day\n`;
+    });
+    msg += `\nSubtotal: LKR ${getTotalPrice().toFixed(2)}`;
+
+    const encodedMsg = encodeURIComponent(msg);
+    const url = `https://wa.me/${WhatsAppNumber}?text=${encodedMsg}`;
+
+    setShowCartModal(false);
+
+    localStorage.removeItem("item-in-cart");
+    setCartItems([]);
+    window.open(url, "_blank");
   };
 
   return (
@@ -104,12 +138,20 @@ const Navbar = ({ activeLink = "Home"}) => {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <span className="relative z-10">{link.name}</span>
-                  <div className={`absolute inset-0 bg-white/5 rounded-lg transition-transform duration-200 ${
-                    activeLink === link.name ? "scale-100" : "scale-0 group-hover:scale-100"
-                  }`}></div>
-                  <div className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-amber-400 to-orange-500 transition-all duration-300 ${
-                    activeLink === link.name ? "w-3/4" : "w-0 group-hover:w-3/4"
-                  }`}></div>
+                  <div
+                    className={`absolute inset-0 bg-white/5 rounded-lg transition-transform duration-200 ${
+                      activeLink === link.name
+                        ? "scale-100"
+                        : "scale-0 group-hover:scale-100"
+                    }`}
+                  ></div>
+                  <div
+                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-amber-400 to-orange-500 transition-all duration-300 ${
+                      activeLink === link.name
+                        ? "w-3/4"
+                        : "w-0 group-hover:w-3/4"
+                    }`}
+                  ></div>
                 </Link>
               ))}
             </nav>
@@ -234,7 +276,8 @@ const Navbar = ({ activeLink = "Home"}) => {
                   <div>
                     <h2 className="text-2xl font-bold text-white">Your Cart</h2>
                     <p className="text-sm text-amber-300">
-                      {cartItems.length} {cartItems.length === 1 ? "item" : "items"}
+                      {cartItems.length}{" "}
+                      {cartItems.length === 1 ? "item" : "items"}
                     </p>
                   </div>
                 </div>
@@ -279,10 +322,12 @@ const Navbar = ({ activeLink = "Home"}) => {
                     </svg>
                     <h3 className="text-white font-semibold">Rental Period</h3>
                   </div>
-                  
+
                   <div className="grid grid-cols-2 gap-3">
                     <div>
-                      <label className="block text-xs text-gray-300 mb-1">Start Date</label>
+                      <label className="block text-xs text-gray-300 mb-1">
+                        Start Date
+                      </label>
                       <input
                         type="date"
                         value={startDate}
@@ -292,7 +337,9 @@ const Navbar = ({ activeLink = "Home"}) => {
                       />
                     </div>
                     <div>
-                      <label className="block text-xs text-gray-300 mb-1">End Date</label>
+                      <label className="block text-xs text-gray-300 mb-1">
+                        End Date
+                      </label>
                       <input
                         type="date"
                         value={endDate}
@@ -302,9 +349,11 @@ const Navbar = ({ activeLink = "Home"}) => {
                       />
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center justify-between pt-2 border-t border-white/10">
-                    <span className="text-sm text-gray-300">Total Duration:</span>
+                    <span className="text-sm text-gray-300">
+                      Total Duration:
+                    </span>
                     <span className="text-amber-300 font-semibold">
                       {getDaysCount()} {getDaysCount() === 1 ? "day" : "days"}
                     </span>
@@ -380,9 +429,7 @@ const Navbar = ({ activeLink = "Home"}) => {
                         <p className="text-amber-300 text-sm">
                           LKR {(item.pricePerDay || 0).toFixed(2)}
                         </p>
-                        <p className="text-gray-400 text-xs">
-                          Qty: 1
-                        </p>
+                        <p className="text-gray-400 text-xs">Qty: 1</p>
                       </div>
 
                       {/* Remove Button */}
@@ -423,13 +470,12 @@ const Navbar = ({ activeLink = "Home"}) => {
 
                   {/* Action Buttons */}
                   <div className="space-y-3">
-                    <Link
-                      href="/cart"
-                      onClick={() => setShowCartModal(false)}
+                    <button
+                      onClick={handleWhatsAppClick}
                       className="block w-full bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-green-900 py-4 px-6 rounded-full font-bold text-center shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
                     >
                       Proceed to Checkout
-                    </Link>
+                    </button>
                     <button
                       onClick={() => setShowCartModal(false)}
                       className="block w-full bg-white/10 hover:bg-white/20 text-white py-3 px-6 rounded-full font-semibold text-center border border-white/20 hover:border-amber-400/50 transition-all duration-200"
@@ -443,6 +489,13 @@ const Navbar = ({ activeLink = "Home"}) => {
           </div>
         </div>
       )}
+      <AlertModal
+  show={showAlert}
+  onClose={() => setShowAlert(false)}
+  title="Missing Dates"
+  message="Please select both start and end dates for the rental period before continuing."
+/>
+
     </>
   );
 };
