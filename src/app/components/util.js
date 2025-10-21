@@ -1,2 +1,9 @@
 export const WhatsAppNumber = '94713100028';
 export const WhatsAppMessage = "Hello Nature Nest Camping, I'd like to inquire about renting some gear for my trip in Down South!";
+export const businessName = "Nature's Nest";
+export const address = "Weluwanarama Mawatha, Weraduwa, Matara 81000";
+export const lat = 6.8014;
+export const lng = 79.9223;
+export const phone = "+94 71 310 0028";
+export const email = "campingnaturenest@gmail.com";
+export const  hours = "Mon - Sun: 9:00 AM - 10:00 PM";

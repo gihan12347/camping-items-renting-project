@@ -1,16 +1,16 @@
 // components/Hero.jsx
 "use client";
 
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
-import { ChevronDown, MessageCircle } from 'lucide-react';
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import { ChevronDown, MessageCircle } from "lucide-react";
 import { WhatsAppNumber, WhatsAppMessage } from "./util.js";
 
 const backgroundImages = [
-  '/images/camping-hero-1.png',
-  '/images/camping-hero-2.png',
-  '/images/camping-hero-3.png',
-  '/images/camping-hero-4.png',
+  "/images/camping-hero-1.png",
+  "/images/camping-hero-2.png",
+  "/images/camping-hero-3.png",
+  "/images/camping-hero-4.png",
 ];
 
 export default function Hero() {
@@ -19,8 +19,8 @@ export default function Hero() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        (prevIndex + 1) % backgroundImages.length
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % backgroundImages.length
       );
     }, 6000);
     return () => clearInterval(interval);
@@ -47,8 +47,8 @@ export default function Hero() {
             className={`
               absolute inset-0 
               transition-opacity duration-1000 ease-in-out 
-              ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}
-              ${isMounted ? 'scale-105' : 'scale-100'}
+              ${index === currentImageIndex ? "opacity-100" : "opacity-0"}
+              ${isMounted ? "scale-105" : "scale-100"}
             `}
             style={{ filter: `brightness(0.7)` }}
           />
@@ -63,22 +63,26 @@ export default function Hero() {
         </p>
 
         <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-3 leading-tight drop-shadow-lg">
-          Explore Down South <br className="hidden md:inline" /> Sri Lanka, Geared Up.
+          Explore Down South <br className="hidden md:inline" /> Sri Lanka,
+          Geared Up.
         </h1>
 
         <p className="text-base md:text-lg text-gray-100 mb-6 max-w-2xl mx-auto drop-shadow-md">
-          Forget the heavy luggage. We provide reliable, high-quality tents, gear, and essentials
-          right here in <strong>Galle, Mirissa, and beyond</strong>. Your adventure starts light.
+          Forget the heavy luggage. We provide reliable, high-quality tents,
+          gear, and essentials right here in{" "}
+          <strong>Galle, Mirissa, Dickwella and beyond</strong>. Your adventure starts
+          light.
         </p>
 
         <a
           href={`https://wa.me/${WhatsAppNumber}?text=${WhatsAppMessage}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center space-x-2 px-8 py-3 bg-green-500 text-white font-bold text-lg rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-105"
+          className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-green-500 via-green-400 to-orange-500 text-white font-bold text-lg rounded-full shadow-xl hover:shadow-2xl hover:from-green-600 hover:via-green-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 relative overflow-hidden"
         >
-          <MessageCircle className="w-5 h-5" />
-          <span>Chat on WhatsApp to Book</span>
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-green-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <MessageCircle className="w-6 h-6 relative z-10 group-hover:rotate-12 transition-transform duration-300" />
+          <span className="relative z-10">Contact us on WhatsApp</span>
         </a>
 
         <div className="mt-8">
@@ -86,7 +90,9 @@ export default function Hero() {
             href="#products"
             className="text-white opacity-80 hover:opacity-100 transition-opacity flex flex-col items-center"
           >
-            <span className="text-xs uppercase tracking-wider mb-0.5">View Rentals</span>
+            <span className="text-xs uppercase tracking-wider mb-0.5">
+              View Rentals
+            </span>
             <ChevronDown className="w-5 h-5 animate-bounce" />
           </a>
         </div>
