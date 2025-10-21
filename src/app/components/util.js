@@ -7,3 +7,4 @@ export const lng = 79.9223;
 export const phone = "+94 71 310 0028";
 export const email = "campingnaturenest@gmail.com";
 export const  hours = "Mon - Sun: 9:00 AM - 10:00 PM";
+export const shortAddress = "Weraduwa, Matara 81000";

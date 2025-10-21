@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
+import { phone, email as Email, shortAddress } from "./util.js";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -97,7 +98,7 @@ const Footer = () => {
                       />
                     </svg>
                   </div>
-                  <span className="text-gray-300">+94 123 456 789</span>
+                  <span className="text-gray-300">{phone}</span>
                 </div>
                 <div className="flex items-center space-x-3 text-sm">
                   <div className="w-8 h-8 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
@@ -115,7 +116,7 @@ const Footer = () => {
                       />
                     </svg>
                   </div>
-                  <span className="text-gray-300">info@naturesnest.lk</span>
+                  <span className="text-gray-300">{Email}</span>
                 </div>
                 <div className="flex items-start space-x-3 text-sm">
                   <div className="w-8 h-8 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
@@ -139,7 +140,7 @@ const Footer = () => {
                       />
                     </svg>
                   </div>
-                  <span className="text-gray-300">Negombo, Sri Lanka</span>
+                  <span className="text-gray-300">{shortAddress}</span>
                 </div>
               </div>
 
