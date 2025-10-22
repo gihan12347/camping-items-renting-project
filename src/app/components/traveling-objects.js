@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
-import Image from 'next/image'; // ✅ Use Next.js Image component for optimization
+import Image from 'next/image';
 
 export default function TravelingObjects() {
   const [objects, setObjects] = useState([
@@ -38,7 +38,6 @@ export default function TravelingObjects() {
     return () => cancelAnimationFrame(animationRef.current);
   }, []);
 
-  // Handle responsive resizing
   useEffect(() => {
     const handleResize = () => {
       setObjects((prev) =>
