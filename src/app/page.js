@@ -7,6 +7,7 @@ import rentalProducts from "./components/rentalProducts.js";
 import LocateUs from "./components/location.js";
 import ImageGallery from "./components/gallery.js";
 import Footer from "./components/footer.js";
+import TravelingObjects from "./components/traveling-objects.js";
 
 export default function Home() {
   const [cartUpdated, setCartUpdated] = useState(0);
@@ -78,6 +79,7 @@ export default function Home() {
 
       {/* Footer */}
       <Footer />
+      <TravelingObjects />
     </>
   );
 }
