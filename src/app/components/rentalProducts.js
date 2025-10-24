@@ -37,7 +37,7 @@ const rentalProducts = [
     description: "Bright, long-lasting lamps for nighttime use.",
     pricePerDay: 200,
     rating: 4.2,
-    imageUrl: "/images/rechargable-lamp.png",
+    imageUrl: "/images/lamp-remove-bg.png",
   },
   {
     id: 6,
