@@ -383,7 +383,7 @@ const Navbar = ({ activeLink = "Home" }) => {
                       Add some items to get started!
                     </p>
                     <Link
-                      href="/rentals"
+                      href="/"
                       onClick={() => setShowCartModal(false)}
                       className="bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-green-900 py-3 px-8 rounded-full font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
                     >
