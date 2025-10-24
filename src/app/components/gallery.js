@@ -9,14 +9,14 @@ export default function ImageGallery() {
 
   // Sample images - replace with your own
   const images = [
-    { id: 1, url: '/images/camping-hero-1.png', title: 'Mountain Vista', category: 'Nature' },
-    { id: 2, url: '/images/camping-hero-2.png', title: 'Forest Path', category: 'Nature' },
-    { id: 3, url: '/images/camping-hero-3.png', title: 'Ocean Waves', category: 'Nature' },
-    { id: 4, url: '/images/camping-hero-4.png', title: 'Desert Sunset', category: 'Nature' },
-    { id: 5, url: 'https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=800&q=80', title: 'Tropical Beach', category: 'Nature' },
-    { id: 6, url: 'https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?w=800&q=80', title: 'Lake Reflection', category: 'Nature' },
-    { id: 7, url: 'https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&q=80', title: 'Snowy Peaks', category: 'Nature' },
-    { id: 8, url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80', title: 'Canyon View', category: 'Nature' },
+    { id: 1, url: '/images/camping-hero-1.png', title: 'Blue Beach', category: 'Beach camping' },
+    { id: 2, url: '/images/camping-hero-2.png', title: 'Blue Beach', category: 'Beach camping' },
+    { id: 3, url: '/images/camping-hero-3.png', title: 'Blue Beach', category: 'Beach camping' },
+    { id: 4, url: '/images/camping-hero-4.png', title: 'Blue Beach', category: 'Beach camping' },
+    { id: 5, url: '/images/ussangoda.jpg', title: 'Ussangoda', category: 'Morning vibe' },
+    { id: 6, url: '/images/night-mode.jpeg', title: 'Night Mode', category: 'Night Camping' },
+    { id: 7, url: '/images/patna.jpeg', title: 'Deniyaya', category: 'Nature' },
+    { id: 8, url: '/images/matara.jpg', title: 'Matara Beach', category: 'Sunset' },
   ];
 
   const handlePrevious = () => {
