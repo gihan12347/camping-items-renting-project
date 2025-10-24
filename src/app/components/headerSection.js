@@ -59,7 +59,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-20 text-center container mx-auto px-4">
         <p className="text-lg font-medium text-amber-400 mb-1 uppercase tracking-widest">
-          Nature Nest Camping
+          Nature's Nest Camping
         </p>
 
         <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-3 leading-tight drop-shadow-lg">
