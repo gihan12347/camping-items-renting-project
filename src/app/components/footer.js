@@ -21,10 +21,10 @@ const Footer = () => {
   ];
 
   const adventures = [
-    { name: "Hiking Trails", href: "/hiking" },
-    { name: "Camping Spots", href: "/camping" },
-    { name: "Water Sports", href: "/water-sports" },
-    { name: "Mountain Climbing", href: "/climbing" },
+    { name: "Hiking Trails", href: "https://www.melbtravel.com/travel-bloggers-share-their-favorite-hikes-around-the-world-pt1" },
+    { name: "Camping Spots", href: "https://www.tripadvisor.com/Attraction_Review-g297897-d16883813-Reviews-Local_Driver_Guide_by_Sri_Lankan_Riders_Holiday-Negombo_Western_Province.html" },
+    { name: "Water Sports", href: "https://www.tripadvisor.com/Attractions-g293961-Activities-c61-t184-Sri_Lanka.html" },
+    { name: "Mountain Climbing", href: "https://www.tripadvisor.com/Attractions-g293961-Activities-c61-t215-Sri_Lanka.html" },
   ];
 
   const handleNewsletterSubmit = (e) => {
