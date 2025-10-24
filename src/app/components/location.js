@@ -4,7 +4,7 @@ import { address, lat, lng, phone, email, hours } from "./util.js";
 
 export default function LocateUs() {
   const openInGoogleMaps = () => {
-    window.open(`https://www.google.com/maps/search/?api=1&query=${lat},${lng}`, '_blank');
+    window.open(`https://www.google.com/maps/place/Nature's+Nest+Camping/@5.9534779,80.563538,17z/data=!3m1!4b1!4m6!3m5!1s0x3ae139003e92ca31:0xae05877071b29bb1!8m2!3d5.9534726!4d80.5661129!16s%2Fg%2F11wwrc5gxc?entry=ttu&g_ep=EgoyMDI1MTAyMC4wIKXMDSoASAFQAw%3D%3D`, '_blank');
   };
 
   return (
