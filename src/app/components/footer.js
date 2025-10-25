@@ -15,8 +15,8 @@ const Footer = () => {
 
   const support = [
     { name: "FAQ", href: "/faq" },
-    { name: "Shipping & Returns", href: "/shipping" },
-    { name: "Contact Us", href: "/contact" },
+    { name: "Delever & Returns", href: "/delever" },
+    { name: "Contact Us", href: "/about" },
     { name: "Terms & Conditions", href: "/terms" },
   ];
 
