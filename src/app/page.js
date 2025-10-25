@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Head from "next/head"; // ✅ Import Head
 import ProductCard from "./components/productCard.js";
 import HeaderSection from "./components/headerSection.js";
 import NavBar from "./components/navbar.js";
@@ -18,11 +19,19 @@ export default function Home() {
 
   return (
     <>
-      {/* Navigation Bar */}
-      {/* The key prop in React is normally used for lists to uniquely identify elements,
-       but you can also use it on a single component. */}
-      {/* React sees that the key changed (0 → 1), so it unmounts the old NavBar and mounts a fresh one. */}
+      <Head>
+        <title>Nature Nest Camping | Outdoor Gear Rentals & Adventures</title>
+        <meta
+          name="description"
+          content="Rent high-quality camping gear and experience unforgettable outdoor adventures with Nature Nest Camping. Explore our gallery, locations, and rental products."
+        />
+        <link
+          rel="canonical"
+          href="https://naturenestcamping.com/"
+        />
+      </Head>
 
+      {/* Navigation Bar */}
       <NavBar key={cartUpdated} />
 
       {/* Main Wrapper */}

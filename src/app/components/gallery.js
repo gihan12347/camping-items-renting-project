@@ -106,9 +106,9 @@ export default function ImageGallery() {
               <div className="h-1 w-12 bg-gradient-to-l from-transparent to-orange-500 rounded-full"></div>
             </div>
           </div>
-          <h1 className="text-6xl md:text-7xl font-black bg-gradient-to-r from-emerald-600 via-green-500 to-orange-500 bg-clip-text text-transparent mb-4 tracking-tight leading-tight">
+          <div className="text-6xl md:text-7xl font-black bg-gradient-to-r from-emerald-600 via-green-500 to-orange-500 bg-clip-text text-transparent mb-4 tracking-tight leading-tight">
             Adventure Gallery
-          </h1>
+          </div>
           <p className="text-gray-600 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
             Explore breathtaking landscapes and unforgettable camping moments captured across Sri Lanka's most stunning destinations
           </p>
