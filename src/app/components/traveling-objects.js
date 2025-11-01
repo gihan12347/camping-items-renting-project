@@ -5,9 +5,7 @@ import Image from 'next/image';
 export default function TravelingObjects() {
   const [objects, setObjects] = useState([
     { id: 1, src: '/images/hicker-remove-bg.png', x: 150, y: 800, speed: 1.4, size: 100 },
-    { id: 2, src: '/images/lamp-remove-bg.png', x: 400, y: 900, speed: 1.2, size: 100 },
-    { id: 3, src: '/images/hicker-remove-bg.png', x: 700, y: 850, speed: 1.8, size: 100 },
-    { id: 4, src: '/images/lamp-remove-bg.png', x: 950, y: 950, speed: 1.1, size: 100 },
+    { id: 2, src: '/images/hicker-remove-bg.png', x: 700, y: 850, speed: 1.8, size: 100 },
   ]);
 
   const animationRef = useRef(null);
