@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import Head from "next/head"; // ✅ Import Head
+import Head from "next/head";
 import ProductCard from "./components/productCard.js";
-import HeaderSection from "./components/headerSection.js";
+import HeaderSectionV2 from "./components/header-section-v2.js";
 import NavBar from "./components/navbar.js";
 import rentalProducts from "./components/rentalProducts.js";
 import LocateUs from "./components/location.js";
@@ -38,7 +38,7 @@ export default function Home() {
       <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 pt-20">
         {/* Hero Section */}
         <section className="mb-16">
-          <HeaderSection />
+          <HeaderSectionV2 />
         </section>
 
         {/* Product Grid Section */}

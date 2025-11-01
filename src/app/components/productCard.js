@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ShoppingCart, Star, Package } from "lucide-react";
 
 export default function ProductCard({ product, onAddToCart }) {
+  //object destructuring.
   const { name, description, pricePerDay, rating, imageUrl } = product;
   
   const stars = Array(5)
