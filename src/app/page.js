@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Head from "next/head";
 import ProductCard from "./components/productCard.js";
 import HeaderSectionV2 from "./components/header-section-v2.js";
 import NavBar from "./components/navbar.js";
@@ -54,7 +53,6 @@ export const metadata = {
   },
 };
 
-
 export default function Home() {
   const [cartUpdated, setCartUpdated] = useState(0);
 
@@ -64,18 +62,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Nature Nest Camping | Outdoor Gear Rentals & Adventures</title>
-        <meta
-          name="description"
-          content="Rent high-quality camping gear and experience unforgettable outdoor adventures with Nature Nest Camping. Explore our gallery, locations, and rental products."
-        />
-        <link
-          rel="canonical"
-          href="https://naturenestcamping.com/"
-        />
-      </Head>
-
       {/* Navigation Bar */}
       <NavBar key={cartUpdated} />
 

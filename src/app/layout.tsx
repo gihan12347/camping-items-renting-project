@@ -39,7 +39,6 @@ export const metadata = {
     follow: true,
   },
 
-  // 🌍 Open Graph (Facebook, LinkedIn, etc.)
   openGraph: {
     type: "website",
     url: "https://naturenestcamping.com/",
