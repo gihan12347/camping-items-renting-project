@@ -13,19 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  // ✅ Basic SEO
   title: {
-    default: "Nature’s Nest Camping | Outdoor Gear Rentals & Adventures",
+    default: "Nature’s Nest Camping | Premium Camping Gear Rentals in Sri Lanka",
     template: "%s | Nature’s Nest Camping",
   },
   description:
-    "Rent high-quality camping gear and experience unforgettable outdoor adventures across Sri Lanka with Nature’s Nest Camping.",
+    "Discover Sri Lanka’s best camping gear rental service with Nature’s Nest Camping. Rent premium tents, sleeping bags, and outdoor essentials — perfectly packed for your next nature adventure.",
   keywords: [
-    "camping gear rental",
-    "outdoor adventures",
+    "camping gear rental Sri Lanka",
+    "outdoor gear rental",
+    "tent rental Sri Lanka",
+    "camping equipment",
     "Sri Lanka camping",
-    "tent rental",
     "Nature’s Nest Camping",
+    "outdoor adventures",
+    "eco-friendly camping",
+    "camping supplies",
+    "hiking gear rental",
   ],
   alternates: {
     canonical: "https://naturenestcamping.com/",
@@ -35,41 +39,42 @@ export const metadata = {
     follow: true,
   },
 
-  // ✅ Open Graph for social media (Facebook, LinkedIn, etc.)
+  // 🌍 Open Graph (Facebook, LinkedIn, etc.)
   openGraph: {
     type: "website",
     url: "https://naturenestcamping.com/",
-    title: "Nature’s Nest Camping | Outdoor Gear Rentals & Adventures",
+    title: "Nature’s Nest Camping | Premium Camping Gear Rentals in Sri Lanka",
     description:
-      "Rent camping gear and explore breathtaking outdoor destinations across Sri Lanka.",
+      "Experience nature like never before with Nature’s Nest Camping — Sri Lanka’s trusted camping gear rental and adventure partner.",
     siteName: "Nature’s Nest Camping",
     locale: "en_LK",
     images: [
       {
-        url: "https://naturenestcamping.com/images/four-person-camping-tent.png",
+        url: "https://naturenestcamping.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Nature’s Nest Camping – Adventure Awaits",
+        alt: "Nature Nest Camping gear and tents",
       },
     ],
   },
 
-  // ✅ Twitter Card for sharing
   twitter: {
     card: "summary_large_image",
     site: "@naturenestcamping",
-    title: "Nature’s Nest Camping | Outdoor Gear Rentals & Adventures",
+    title: "Nature’s Nest Camping | Rent Camping Gear in Sri Lanka",
     description:
-      "Rent top-quality camping gear and explore Sri Lanka’s best outdoor experiences.",
-    images: ["https://naturenestcamping.com/images/four-person-camping-tent.png"],
+      "Plan your next adventure with ease — rent high-quality camping gear and outdoor essentials from Nature’s Nest Camping.",
+    images: [
+      "https://naturenestcamping.com/og-image.jpg"
+    ],
   },
 
-  // ✅ Favicon and icons
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
 };
+
 
 export default function RootLayout({
   children,
