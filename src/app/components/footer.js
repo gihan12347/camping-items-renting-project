@@ -147,7 +147,7 @@ const Footer = () => {
               {/* Social Media Icons */}
               <div className="flex space-x-3">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/profile.php?id=61563870370550" target="_blank"
                   className="w-10 h-10 bg-white/5 hover:bg-gradient-to-br hover:from-amber-400 hover:to-orange-500 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-translate-y-1 group border border-white/10"
                   aria-label="Facebook"
                 >
@@ -186,7 +186,7 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://youtube.com/@naturesnestcamping?si=bi83Jj7mXJidqABb" target="_blank"
                   className="w-10 h-10 bg-white/5 hover:bg-gradient-to-br hover:from-amber-400 hover:to-orange-500 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-translate-y-1 group border border-white/10"
                   aria-label="YouTube"
                 >
