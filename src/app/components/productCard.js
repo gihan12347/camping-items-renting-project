@@ -35,7 +35,7 @@ export default function ProductCard({ product, onAddToCart }) {
       }
       cart.push(value);
       localStorage.setItem(key, JSON.stringify(cart));
-      window.scrollTo({ top: -20, behavior: "smooth" });
+      window.scrollTo({ top: -100, behavior: "smooth" });
       if (onAddToCart) onAddToCart();
     });
   };
