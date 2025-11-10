@@ -49,7 +49,7 @@ export const metadata = {
     locale: "en_LK",
     images: [
       {
-        url: "https://naturenestcamping.com/og-image-v2.jpg",
+        url: "https://naturenestcamping.com/og-image-v3.jpg",
         width: 1200,
         height: 630,
         alt: "Nature Nest Camping gear and tents",
@@ -64,7 +64,7 @@ export const metadata = {
     description:
       "Plan your next adventure with ease — rent high-quality camping gear and outdoor essentials from Nature’s Nest Camping.",
     images: [
-      "https://naturenestcamping.com/og-image-v2.jpg"
+      "https://naturenestcamping.com/og-image-v3.jpg"
     ],
   },
 
