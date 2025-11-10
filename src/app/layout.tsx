@@ -97,6 +97,14 @@ export default function RootLayout({
             gtag('config', 'G-05QERYB3BS');
           `}
         </Script>
+        
+        {/* Google AdSense (Auto Ads enabled) */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2010341405700903"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
 
         {/* ✅ Optional: JSON-LD Structured Data for Business */}
         <Script id="structured-data" type="application/ld+json" strategy="afterInteractive">
