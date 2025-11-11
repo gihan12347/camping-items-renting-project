@@ -8,6 +8,7 @@ import LocateUs from "./location.js";
 import ImageGallery from "./gallery.js";
 import Footer from "./footer.js";
 import TravelingObjects from "./traveling-objects.js";
+import GoogleAd from "./adsence.js";
 
 export default function Home() {
   const [cartUpdated, setCartUpdated] = useState(0);
@@ -26,6 +27,10 @@ export default function Home() {
         {/* Hero Section */}
         <section className="mb-16">
           <HeaderSectionV2 />
+        </section>
+        {/* AdSense Advertisement */}
+        <section className="container mx-auto px-4 md:px-8 mb-16">
+          <GoogleAd />
         </section>
 
         {/* Product Grid Section */}
@@ -53,6 +58,10 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="container mx-auto px-4 md:px-8 mb-16">
+          <GoogleAd />
+        </section>
+
         {/* Image Gallery Section */}
         <section className="bg-gray-50 py-12">
           <div className="container mx-auto px-4 md:px-8 text-center">
@@ -67,11 +76,19 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="container mx-auto px-4 md:px-8 mb-16">
+          <GoogleAd />
+        </section>
+
         {/* Location Section */}
         <section className="bg-white py-12 shadow-inner">
           <LocateUs />
         </section>
       </main>
+
+      <section className="container mx-auto px-4 md:px-8 mb-16">
+        <GoogleAd />
+      </section>
 
       {/* Footer */}
       <Footer />
