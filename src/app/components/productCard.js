@@ -40,7 +40,7 @@ export default function ProductCard({ product, onAddToCart }) {
   };
 
   return (
-    <div className="max-w-xs mx-auto md:max-w-sm bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+    <div className="max-w-xs mx-auto md:max-w-md lg:max-w-xs bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
       {/* Product Image - Full display with contain */}
       <div className="relative h-64 w-full bg-gradient-to-br from-emerald-50 via-white to-orange-50 overflow-hidden">
         {imageUrl ? (
