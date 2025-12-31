@@ -92,7 +92,7 @@ export default function Home() {
 
       {/* Footer */}
       <Footer />
-      <TravelingObjects />
+      {/* <TravelingObjects /> */}
     </>
   );
 }
