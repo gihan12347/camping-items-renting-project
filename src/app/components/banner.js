@@ -26,7 +26,7 @@ export default function NaturesNestBanner() {
           <div className="flex-shrink-0 mb-4 md:mb-0">
             <img
               src="images/logo.png"
-              alt="Nature's Nest Camping Logo"
+              alt="Nature Nest Camping Logo"
               className="w-40 sm:w-56 lg:w-64 drop-shadow-2xl hover:scale-105 transition-transform duration-300"
             />
           </div>

@@ -133,7 +133,7 @@ export default function ImageGallery() {
               <div className="aspect-[4/5] overflow-hidden">
                 <img
                   src={image.url}
-                  alt={image.title}
+                  alt={'Nature Nest ' + image.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>

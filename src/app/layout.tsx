@@ -13,29 +13,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  applicationName: "Nature Nest Camping",
+
   title: {
-    default: "Nature Nest Camping | Camping Tent Rentals & Outdoor Gear in Sri Lanka",
+    default: "Nature Nest | Camping Gear Rental in Sri Lanka for Travelers",
     template: "%s | Nature Nest Camping",
   },
 
   description:
-    "Nature Nest Camping offers premium camping tent rentals, sleeping bags for rent, canopy tents, and complete outdoor gear packages in Sri Lanka. Book high-quality, affordable camp gear near you and start your next adventure with Nature Nest.",
+    "Nature Nest Camping provides camping tents and outdoor gear rentals in Sri Lanka for tourists from the USA and Europe. Ideal for backpackers, adventurers, and nature lovers.",
 
   keywords: [
     "nature nest",
     "nature nest camping",
-    "naturenest",
-    "camp tent for rent",
     "camping tent rentals",
-    "camping nest",
-    "camp gear near me",
-    "sleeping bags for rent",
-    "canopy tent for sale near me",
-    "camping gear rental Sri Lanka",
+    "camping gear rental",
     "outdoor gear rental",
-    "camping equipment Sri Lanka",
+    "tent rental Europe",
+    "camping gear rental USA",
+    "sleeping bags for rent",
+    "canopy tent rental",
+    "eco camping gear",
     "Nature Nest outdoor gear",
-    "Sri Lanka camping rentals",
   ],
 
   alternates: {
@@ -47,14 +46,20 @@ export const metadata = {
     follow: true,
   },
 
+  other: {
+    "geo.region": "US, EU, LK",
+    "geo.placename": "United States, Europe, Sri Lanka",
+    "ICBM": "37.0902, -95.7129",
+  },
+
   openGraph: {
     type: "website",
     url: "https://naturenestcamping.com/",
-    title: "Nature Nest Camping | Tents & Outdoor Gear Rentals in Sri Lanka",
+    title: "Nature Nest Camping | Outdoor Gear & Tent Rentals",
     description:
-      "Rent high-quality tents, camping gear, canopy tents, and sleeping bags from Nature Nest Camping. Your trusted outdoor gear partner in Sri Lanka.",
+      "Rent high-quality camping tents, outdoor gear, and accessories from Nature Nest Camping. Available for campers in Europe, the USA, and Sri Lanka.",
     siteName: "Nature Nest Camping",
-    locale: "en_LK",
+    locale: "en_US",
     images: [
       {
         url: "https://naturenestcamping.com/og-image-v3.jpg",
@@ -67,10 +72,9 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    site: "@naturenestcamping",
-    title: "Nature Nest Camping | Rent Camping Tents & Gear in Sri Lanka",
+    title: "Nature Nest Camping | Outdoor Gear Rentals",
     description:
-      "Planning a camping trip? Nature Nest Camping offers tent rentals, canopy tents, sleeping bags, and complete outdoor gear packages.",
+      "Looking for camping tents and outdoor gear? Nature Nest Camping provides high-quality rental gear across Europe, the USA, and Sri Lanka.",
     images: ["https://naturenestcamping.com/og-image-v3.jpg"],
   },
 
@@ -79,8 +83,6 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
 };
-
-
 
 export default function RootLayout({
   children,
@@ -92,6 +94,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-05QERYB3BS"
           strategy="afterInteractive"
@@ -104,8 +107,8 @@ export default function RootLayout({
             gtag('config', 'G-05QERYB3BS');
           `}
         </Script>
-        
-        {/* Google AdSense (Auto Ads enabled) */}
+
+        {/* Google AdSense */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2010341405700903"
@@ -113,23 +116,29 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
 
-        {/* ✅ Optional: JSON-LD Structured Data for Business */}
-        <Script id="structured-data" type="application/ld+json" strategy="afterInteractive">
+        {/* Structured Data for Global Business */}
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          strategy="afterInteractive"
+        >
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "Nature’s Nest Camping",
+            "@type": "Organization",
+            name: "Nature Nest Camping",
             url: "https://naturenestcamping.com/",
             logo: "https://naturenestcamping.com/images/logo.png",
             description:
-              "Rent high-quality camping gear and explore nature in Sri Lanka with ease.",
+              "Nature Nest Camping provides camping tents and outdoor gear rentals for adventurers in Europe, the USA, and Sri Lanka.",
             sameAs: [
               "https://web.facebook.com/profile.php?id=61563870370550"
             ],
-            address: {
-              "@type": "PostalAddress",
-              addressCountry: "LK",
-            },
+            areaServed: [
+              { "@type": "Country", name: "United States" },
+              { "@type": "Continent", name: "Europe" },
+              { "@type": "Country", name: "Sri Lanka" }
+            ],
+            priceRange: "$$",
           })}
         </Script>
 

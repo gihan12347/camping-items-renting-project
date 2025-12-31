@@ -63,7 +63,7 @@ const Footer = () => {
                   <div className="relative w-20 h-20">
                     <img
                       src="images/logo.png"
-                      alt="Nature's Nest Logo"
+                      alt="Nature Nest Logo"
                       className="w-full h-full object-contain drop-shadow-2xl"
                     />
                   </div>
