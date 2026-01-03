@@ -14,7 +14,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://naturenestcamping.com/og-image-v3.jpg",
+        url: "https://naturenestcamping.com/og-image-v4.png",
         width: 1200,
         height: 630,
         alt: "Nature Nest Camping gear and tents",

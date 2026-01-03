@@ -62,7 +62,7 @@ export const metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://naturenestcamping.com/og-image-v3.jpg",
+        url: "https://naturenestcamping.com/og-image-v4.png",
         width: 1200,
         height: 630,
         alt: "Nature Nest Camping tents and outdoor gear",
@@ -75,7 +75,7 @@ export const metadata = {
     title: "Nature Nest Camping | Outdoor Gear Rentals",
     description:
       "Looking for camping tents and outdoor gear? Nature Nest Camping provides high-quality rental gear across Europe, the USA, and Sri Lanka.",
-    images: ["https://naturenestcamping.com/og-image-v3.jpg"],
+    images: ["https://naturenestcamping.com/og-image-v4.png"],
   },
 
   icons: {
