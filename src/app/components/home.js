@@ -39,11 +39,12 @@ export default function Home() {
           className="container mx-auto px-4 md:px-8 mb-16 text-center"
         >
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6">
-            Featured Equipment
+            Camping Equipment for Rent
           </h2>
           <p className="text-gray-600 mb-12 text-lg max-w-2xl mx-auto">
-            High-quality camping gear available for rent — everything you need
-            for your next outdoor adventure.
+            Nature Nest Camping offers camp tents for rent, stoves, and outdoor
+            essentials for travelers exploring Sri Lanka, with trusted support for
+            visitors from the USA and Europe.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">

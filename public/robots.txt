@@ -4,3 +4,4 @@ Disallow:
 
 # Sitemap location
 Sitemap: https://naturenestcamping.com/sitemap.xml
+Host: https://naturenestcamping.com

@@ -13,7 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://naturenestcamping.com"),
   applicationName: "Nature Nest Camping",
+  category: "Travel",
 
   title: {
     default: "Nature Nest | Camping Gear Rental in Sri Lanka for Travelers",
@@ -26,7 +28,15 @@ export const metadata = {
   keywords: [
     "nature nest",
     "nature nest camping",
+    "naturenest",
+    "nest camping",
+    "nature and nest",
+    "natures nest",
+    "nature's nest",
     "camping tent rentals",
+    "camp tent for rent",
+    "camping stove near me",
+    "camping equipment for rent",
     "camping gear rental",
     "outdoor gear rental",
     "tent rental Europe",
@@ -39,6 +49,11 @@ export const metadata = {
 
   alternates: {
     canonical: "https://naturenestcamping.com/",
+    languages: {
+      "en-US": "https://naturenestcamping.com/",
+      "en-GB": "https://naturenestcamping.com/",
+      "en-LK": "https://naturenestcamping.com/",
+    },
   },
 
   robots: {
@@ -60,6 +75,7 @@ export const metadata = {
       "Rent high-quality camping tents, outdoor gear, and accessories from Nature Nest Camping. Available for campers in Europe, the USA, and Sri Lanka.",
     siteName: "Nature Nest Camping",
     locale: "en_US",
+    localeAlternate: ["en_GB", "en_LK"],
     images: [
       {
         url: "https://naturenestcamping.com/og-image-v5.png",
