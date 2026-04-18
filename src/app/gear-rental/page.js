@@ -26,10 +26,6 @@ export default function Home() {
           <Banner />
         </div>
 
-        <section className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8 mb-10 sm:mb-12">
-          <GoogleAd />
-        </section>
-
         {/* Product Grid Section */}
         <section
           id="products"

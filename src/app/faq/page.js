@@ -18,10 +18,6 @@ export default function Home() {
           <Banner />
         </div>
 
-        <section className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8 mb-10 sm:mb-12">
-          <GoogleAd />
-        </section>
-
         {/* Location Section */}
         <section className="bg-white py-10 sm:py-12 shadow-inner">
           <FAQ />

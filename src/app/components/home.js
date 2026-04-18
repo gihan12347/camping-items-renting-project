@@ -33,10 +33,6 @@ export default function Home() {
         <section className="mb-10 sm:mb-14 md:mb-16">
           <HeaderSectionV2 />
         </section>
-        {/* AdSense Advertisement */}
-        <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 mb-10 sm:mb-14 md:mb-16">
-          <GoogleAd />
-        </section>
 
         {/* Product Grid Section */}
         <section

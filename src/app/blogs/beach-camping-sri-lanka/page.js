@@ -39,10 +39,6 @@ export default function BeachCampingPage() {
         />
       </figure>
 
-      <div className="mb-8 rounded-xl border border-gray-200/80 bg-white/90 p-4 shadow-sm">
-        <GoogleAd />
-      </div>
-
       <div className="prose prose-gray max-w-none prose-a:text-emerald-700">
         <p className="text-gray-700 leading-relaxed">
           Humidity and sudden rain mean a ventilated tent and a groundsheet matter as
@@ -57,6 +53,10 @@ export default function BeachCampingPage() {
           our <Link href="/blogs/mountain-camping-sri-lanka">hill-country camping</Link>{" "}
           notes.
         </p>
+      </div>
+
+      <div className="not-prose mt-10 rounded-xl border border-gray-200/80 bg-white/90 p-4 shadow-sm">
+        <GoogleAd />
       </div>
     </article>
   );

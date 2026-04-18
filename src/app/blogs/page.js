@@ -93,10 +93,6 @@ export default function BlogsPage() {
             </figcaption>
           </figure>
 
-          <div className="not-prose mb-10 rounded-xl border border-gray-200/80 bg-white/90 p-4 shadow-sm">
-            <GoogleAd />
-          </div>
-
           <div
             className="prose prose-gray max-w-none prose-headings:scroll-mt-28 prose-p:text-[0.9375rem] sm:prose-p:text-base prose-h2:text-xl sm:prose-h2:text-2xl prose-a:text-emerald-700 prose-a:no-underline hover:prose-a:underline"
             itemProp="articleBody"

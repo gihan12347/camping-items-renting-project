@@ -40,10 +40,6 @@ export default function MountainCampingPage() {
         />
       </figure>
 
-      <div className="mb-8 rounded-xl border border-gray-200/80 bg-white/90 p-4 shadow-sm">
-        <GoogleAd />
-      </div>
-
       <div className="prose prose-gray max-w-none prose-a:text-emerald-700">
         <p className="text-gray-700 leading-relaxed">
           Trains and tuk-tuks make ridge viewpoints reachable without a car culture
@@ -58,6 +54,10 @@ export default function MountainCampingPage() {
           tips on{" "}
           <Link href="/blogs/beach-camping-sri-lanka">beach &amp; coast camping</Link>.
         </p>
+      </div>
+
+      <div className="not-prose mt-10 rounded-xl border border-gray-200/80 bg-white/90 p-4 shadow-sm">
+        <GoogleAd />
       </div>
     </article>
   );
