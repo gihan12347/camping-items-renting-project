@@ -165,7 +165,7 @@ export default function ImageGallery() {
         {/* Lightbox Modal */}
         {selectedImage && (
           <div 
-            className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-gray-900/98 via-emerald-900/95 to-orange-900/98 backdrop-blur-md"
+            className="fixed inset-0 z-[100015] flex items-center justify-center bg-gradient-to-br from-gray-900/98 via-emerald-900/95 to-orange-900/98 backdrop-blur-md"
             onClick={() => setSelectedImage(null)}
           >
             {/* Close Button */}

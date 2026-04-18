@@ -7,7 +7,7 @@ const AlertModal = ({ show, onClose, title = "Notice", message }) => {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 flex items-center justify-center bg-black/50 z-50"
+        className="fixed inset-0 z-[100020] flex items-center justify-center bg-black/50"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

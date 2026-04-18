@@ -106,7 +106,7 @@ const Navbar = ({ activeLink = "Home" }) => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-[100000] transition-all duration-300 ${
           scrolled
             ? "bg-gradient-to-r from-emerald-900/95 via-green-900/95 to-teal-900/95 backdrop-blur-md shadow-2xl"
             : "bg-gradient-to-r from-emerald-900/90 via-green-900/90 to-teal-900/90 backdrop-blur-sm"
@@ -278,7 +278,7 @@ const Navbar = ({ activeLink = "Home" }) => {
 
       {/* Cart Modal */}
       {showCartModal && (
-        <div className="fixed inset-0 z-50 overflow-hidden">
+        <div className="fixed inset-0 z-[100010] overflow-hidden">
           {/* Backdrop */}
           <div
             className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"

@@ -52,16 +52,16 @@ export default function GoogleAd() {
   return (
     <div
       ref={adRef}
+      className="relative z-0 isolate max-w-full overflow-hidden"
       style={{
-        width: "100%", // ensure container has width
+        width: "100%",
         minHeight: loaded ? "auto" : "0",
-        overflow: loaded ? "visible" : "hidden",
         display: loaded ? "block" : "none",
       }}
     >
       <ins
         className="adsbygoogle"
-        style={{ display: "block" }}
+        style={{ display: "block", position: "relative", zIndex: 0 }}
         data-ad-client="ca-pub-2010341405700903"
         data-ad-slot={slotId}
         data-ad-format="auto"
