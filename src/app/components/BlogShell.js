@@ -24,7 +24,8 @@ export default function BlogShell({ children }) {
     <>
       <NavBar activeLink="Blogs" />
 
-      <main className="min-h-screen bg-gradient-to-b from-white via-emerald-50/30 to-gray-100 pt-[calc(4rem+2vh)] sm:pt-[calc(5rem+2vh)]">
+      {/* pt matches navbar: h-1 accent + h-24 row (6.25rem) + gap; was 4–5rem and let content/ads sit under fixed header */}
+      <main className="min-h-screen bg-gradient-to-b from-white via-emerald-50/30 to-gray-100 pt-[calc(6.25rem+1.5rem+env(safe-area-inset-top,0px))]">
         <div className="mx-auto w-full max-w-7xl px-4 pb-12 pt-5 sm:px-6 sm:pb-16 sm:pt-7 lg:px-8 lg:pt-10">
           {/* Tablet & phone: horizontal guide picker */}
           <div className="mb-8 lg:hidden">
@@ -99,7 +100,7 @@ export default function BlogShell({ children }) {
             <aside className="hidden lg:block lg:w-72 lg:shrink-0">
               <nav
                 aria-label="Blog guides"
-                className="sticky top-[calc(5rem+1rem)] max-h-[calc(100vh-6rem)] overflow-y-auto rounded-2xl border border-gray-200/80 bg-white p-4 shadow-md ring-1 ring-black/[0.03]"
+                className="sticky top-[calc(6.25rem+1rem+env(safe-area-inset-top,0px))] max-h-[calc(100dvh-8rem-env(safe-area-inset-top,0px))] overflow-y-auto rounded-2xl border border-gray-200/80 bg-white p-4 shadow-md ring-1 ring-black/[0.03]"
               >
                 <p className="text-[11px] font-bold uppercase tracking-wider text-emerald-800">
                   Camping guides
