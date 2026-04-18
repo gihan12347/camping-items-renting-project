@@ -3,7 +3,7 @@ import ContactAndSupport from "../components/contact-support.js";
 
 export default function DeliveryAndReturn() {
   return (
-    <section className="relative py-20 px-4 overflow-hidden">
+    <section className="relative overflow-hidden py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-emerald-50 to-orange-50"></div>
       
@@ -11,23 +11,23 @@ export default function DeliveryAndReturn() {
       <div className="absolute top-20 right-0 w-72 h-72 bg-orange-300/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-300/20 rounded-full blur-3xl"></div>
       
-      <div className="relative max-w-6xl mx-auto">
+      <div className="relative mx-auto w-full max-w-6xl">
         {/* Header */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-10 sm:mb-14">
           <div className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-green-100 to-orange-100 rounded-full mb-4">
             <span className="text-sm font-semibold text-green-800">Hassle-Free Service</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-700 via-emerald-600 to-orange-600 bg-clip-text text-transparent mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-700 via-emerald-600 to-orange-600 bg-clip-text text-transparent mb-4 text-balance">
             Delivery & Return Information
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed px-1 sm:px-0">
             Convenient delivery and flexible return options for your camping adventures
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid gap-6 sm:gap-8 lg:grid-cols-2 mb-10 sm:mb-12">
           {/* Delivery Section */}
-          <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-green-100 hover:border-green-300 overflow-hidden">
+          <div className="group relative overflow-hidden rounded-3xl border-2 border-green-100 bg-white p-5 shadow-lg transition-all duration-300 hover:border-green-300 hover:shadow-2xl sm:p-8">
             {/* Gradient accent */}
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-green-500 to-emerald-500"></div>
             
@@ -68,7 +68,7 @@ export default function DeliveryAndReturn() {
           </div>
 
           {/* Return Section */}
-          <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-orange-100 hover:border-orange-300 overflow-hidden">
+          <div className="group relative overflow-hidden rounded-3xl border-2 border-orange-100 bg-white p-5 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-2xl sm:p-8">
             {/* Gradient accent */}
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-orange-500 to-amber-500"></div>
             
@@ -109,7 +109,7 @@ export default function DeliveryAndReturn() {
         </div>
 
         {/* Service Area Section */}
-        <div className="relative bg-gradient-to-r from-green-100 via-emerald-100 to-orange-100 rounded-3xl p-8 shadow-lg border-2 border-green-200 overflow-hidden">
+        <div className="relative overflow-hidden rounded-3xl border-2 border-green-200 bg-gradient-to-r from-green-100 via-emerald-100 to-orange-100 p-5 shadow-lg sm:p-8">
           {/* Decorative background pattern */}
           <div className="absolute inset-0 opacity-5">
             <div className="absolute top-0 right-0 w-64 h-64 bg-green-600 rounded-full -translate-y-1/2 translate-x-1/2"></div>

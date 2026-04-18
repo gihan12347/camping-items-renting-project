@@ -10,6 +10,7 @@ const navLinks = [
   { name: "Gear Rentals", href: "/gear-rental" },
   { name: "Destinations", href: "/destinations" },
   { name: "About Us", href: "/about" },
+  { name: "Blogs", href: "/blogs" },
 ];
 
 const Navbar = ({ activeLink = "Home" }) => {

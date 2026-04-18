@@ -20,8 +20,8 @@ export default function NaturesNestBanner() {
       </div>
 
       {/* Content Wrapper */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-10 sm:py-14">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-14">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 lg:gap-10">
           {/* Left Side - Logo */}
           <div className="flex-shrink-0 mb-4 md:mb-0">
             <img
@@ -34,12 +34,12 @@ export default function NaturesNestBanner() {
           {/* Right Side - Tagline and Button */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4 sm:gap-5 md:gap-6">
             {/* Main Tagline */}
-            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight">
+            <h1 className="text-white text-xl sm:text-3xl md:text-4xl font-semibold leading-snug sm:leading-tight text-balance">
               Discover Beauty of Down South Sri Lanka
             </h1>
 
             {/* Supporting Text */}
-            <p className="text-emerald-100 text-base sm:text-lg md:text-xl max-w-lg leading-relaxed">
+            <p className="text-emerald-100 text-sm sm:text-lg md:text-xl max-w-lg leading-relaxed">
               Rent top-quality camping gear and outdoor essentials from{" "}
               <span className="font-semibold text-white">Nature’s Nest</span> — 
               your trusted partner for unforgettable adventures in the lush forests, 
@@ -48,8 +48,9 @@ export default function NaturesNestBanner() {
 
             {/* WhatsApp Button */}
             <button
+              type="button"
               onClick={handleWhatsAppClick}
-              className="bg-gradient-to-r from-orange-500 to-orange-400 hover:from-orange-600 hover:to-orange-500 text-white font-bold py-2.5 px-6 sm:py-3 sm:px-8 rounded-full text-sm sm:text-base shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-2 sm:gap-3"
+              className="min-h-[44px] w-full sm:w-auto justify-center bg-gradient-to-r from-orange-500 to-orange-400 hover:from-orange-600 hover:to-orange-500 text-white font-bold py-3 px-6 sm:py-3 sm:px-8 rounded-full text-sm sm:text-base shadow-lg hover:shadow-2xl active:scale-[0.98] md:hover:scale-105 transition-all duration-300 inline-flex items-center gap-2 sm:gap-3 touch-manipulation"
             >
               <MessageCircle size={20} className="sm:w-6 sm:h-6" />
               <span>Contact Us on WhatsApp</span>

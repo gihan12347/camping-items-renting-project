@@ -34,7 +34,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
   
   return (
-    <section className="relative py-20 px-4 overflow-hidden">
+    <section className="relative overflow-hidden py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-emerald-50 via-white to-orange-50"></div>
       
@@ -42,16 +42,16 @@ export default function FAQ() {
       <div className="absolute top-0 right-0 w-96 h-96 bg-green-200/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-200/30 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
       
-      <div className="relative max-w-3xl mx-auto">
+      <div className="relative mx-auto w-full max-w-3xl">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           <div className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-green-100 to-orange-100 rounded-full mb-4">
             <span className="text-sm font-semibold text-green-800">Got Questions?</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-700 via-emerald-600 to-orange-600 bg-clip-text text-transparent mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-700 via-emerald-600 to-orange-600 bg-clip-text text-transparent mb-4 text-balance">
             Frequently Asked Questions
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed px-1 sm:px-0">
             Everything you need to know about renting camping gear with Nature's Nest
           </p>
         </div>

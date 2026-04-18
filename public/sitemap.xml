@@ -8,6 +8,30 @@
   </url>
 
   <url>
+    <loc>https://naturenestcamping.com/blogs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://naturenestcamping.com/blogs/beach-camping-sri-lanka</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://naturenestcamping.com/blogs/mountain-camping-sri-lanka</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://naturenestcamping.com/blogs/rent-camping-gear-sri-lanka</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
     <loc>https://naturenestcamping.com/gear-rental</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

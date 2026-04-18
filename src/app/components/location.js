@@ -16,7 +16,7 @@ export default function LocateUs() {
   };
 
   return (
-    <div className="w-full relative py-12 px-4">
+    <div className="relative w-full py-10 sm:py-12 md:py-14 px-4 sm:px-6 lg:px-8">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -27,7 +27,7 @@ export default function LocateUs() {
         <div className="absolute inset-0 bg-gradient-to-br from-green-900/85 via-green-800/90 to-orange-900/85"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="relative z-10 mx-auto w-full max-w-7xl">
         {/* Header */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-24 h-24 mb-4">
@@ -37,7 +37,7 @@ export default function LocateUs() {
               className="w-full h-full object-contain drop-shadow-2xl"
             />
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2 drop-shadow-lg">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2 drop-shadow-lg text-balance px-2">
             Get In Touch
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-orange-300 to-green-400 mx-auto rounded-full shadow-md"></div>

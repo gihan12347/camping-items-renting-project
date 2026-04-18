@@ -7,7 +7,6 @@ import rentalProducts from "./rentalProducts.js";
 import LocateUs from "./location.js";
 import ImageGallery from "./gallery.js";
 import Footer from "./footer.js";
-import TravelingObjects from "./traveling-objects.js";
 import GoogleAd from "./adsence.js";
 
 export default function Home() {
@@ -20,34 +19,40 @@ export default function Home() {
   return (
     <>
       {/* Navigation Bar */}
+      {/* handleAddToCart pass to clild as funtional prop, from the child
+      componet call this funtion then it run on parent component and update the
+      value of cartUpdated state. when cartUpdated status change, 
+      the NavBar component will re-render and update the cart items.
+      this call Lifting State Up design pattern in react. */}
+
       <NavBar key={cartUpdated} />
 
       {/* Main Wrapper */}
-      <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 pt-20">
+      <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 pt-[calc(4rem+1.5vh)] sm:pt-[calc(5rem+2vh)]">
         {/* Hero Section */}
-        <section className="mb-16">
+        <section className="mb-10 sm:mb-14 md:mb-16">
           <HeaderSectionV2 />
         </section>
         {/* AdSense Advertisement */}
-        <section className="container mx-auto px-4 md:px-8 mb-16">
+        <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 mb-10 sm:mb-14 md:mb-16">
           <GoogleAd />
         </section>
 
         {/* Product Grid Section */}
         <section
           id="products"
-          className="container mx-auto px-4 md:px-8 mb-16 text-center"
+          className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 mb-4 sm:mb-6 text-balance">
             Camping Equipment for Rent
           </h2>
-          <p className="text-gray-600 mb-12 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 mb-8 sm:mb-12 text-base sm:text-lg max-w-2xl mx-auto px-1 sm:px-0 leading-relaxed">
             Nature Nest Camping offers camp tents for rent, stoves, and outdoor
             essentials for travelers exploring Sri Lanka, with trusted support for
             visitors from the USA and Europe.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
             {rentalProducts.map((product) => (
               <div
                 key={product.id}
@@ -59,17 +64,17 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="container mx-auto px-4 md:px-8 mb-16">
+        <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16">
           <GoogleAd />
         </section>
 
         {/* Image Gallery Section */}
-        <section className="bg-gray-50 py-12">
-          <div className="container mx-auto px-4 md:px-8 text-center">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6">
+        <section className="bg-gray-50 py-10 sm:py-12 md:py-14">
+          <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 mb-4 sm:mb-6 text-balance">
               Explore Our Gallery
             </h2>
-            <p className="text-gray-600 mb-8 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 mb-6 sm:mb-8 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
               Take a look at some of our most popular camping setups and happy
               adventurers.
             </p>
@@ -77,17 +82,17 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="container mx-auto px-4 md:px-8 mb-16">
+        <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16">
           <GoogleAd />
         </section>
 
         {/* Location Section */}
-        <section className="bg-white py-12 shadow-inner">
+        <section className="bg-white py-10 sm:py-12 shadow-inner">
           <LocateUs />
         </section>
       </main>
 
-      <section className="container mx-auto px-4 md:px-8 mb-16">
+      <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 mb-10 sm:mb-16">
         <GoogleAd />
       </section>
 

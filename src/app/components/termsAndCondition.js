@@ -72,7 +72,7 @@ export default function TermsAndConditions() {
   };
 
   return (
-    <section className="relative py-20 px-4 overflow-hidden">
+    <section className="relative overflow-hidden py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-emerald-50 to-orange-50"></div>
 
@@ -80,18 +80,18 @@ export default function TermsAndConditions() {
       <div className="absolute top-20 right-0 w-96 h-96 bg-orange-300/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-300/20 rounded-full blur-3xl"></div>
 
-      <div className="relative max-w-5xl mx-auto">
+      <div className="relative mx-auto w-full max-w-5xl">
         {/* Header */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-10 sm:mb-14">
           <div className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-green-100 to-orange-100 rounded-full mb-4">
             <span className="text-sm font-semibold text-green-800">
               Please Read Carefully
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-700 via-emerald-600 to-orange-600 bg-clip-text text-transparent mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-700 via-emerald-600 to-orange-600 bg-clip-text text-transparent mb-4 text-balance">
             Terms & Conditions
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed px-1 sm:px-0">
             These terms ensure a fair, safe, and enjoyable rental experience for all our customers
           </p>
         </div>
