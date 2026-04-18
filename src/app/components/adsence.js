@@ -1,9 +1,12 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
 
+/** nature-nest-camping — matches AdSense unit (ca-pub-2010341405700903 / 9800205682) */
+const AD_CLIENT = "ca-pub-2010341405700903";
+const AD_SLOT = "9800205682";
+
 export default function GoogleAd() {
   const [loaded, setLoaded] = useState(false);
-  const slotId = "5470040138"; // Your AdSense slot ID
   const adRef = useRef(null);
 
   useEffect(() => {
@@ -47,7 +50,7 @@ export default function GoogleAd() {
     observer.observe(adRef.current);
 
     return () => observer.disconnect();
-  }, [slotId]);
+  }, []);
 
   return (
     <div
@@ -59,14 +62,15 @@ export default function GoogleAd() {
         display: loaded ? "block" : "none",
       }}
     >
+      {/* nature-nest-camping */}
       <ins
         className="adsbygoogle"
-        style={{ display: "block", position: "relative", zIndex: 0 }}
-        data-ad-client="ca-pub-2010341405700903"
-        data-ad-slot={slotId}
+        style={{ display: "block" }}
+        data-ad-client={AD_CLIENT}
+        data-ad-slot={AD_SLOT}
         data-ad-format="auto"
         data-full-width-responsive="true"
-      ></ins>
+      />
     </div>
   );
 }
