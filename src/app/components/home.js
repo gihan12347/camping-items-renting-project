@@ -28,7 +28,7 @@ export default function Home() {
       <NavBar key={cartUpdated} />
 
       {/* Main Wrapper */}
-      <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 pt-[calc(4rem+1.5vh)] sm:pt-[calc(5rem+2vh)]">
+      <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 pt-[calc(6.25rem+1.5rem+env(safe-area-inset-top,0px))]">
         {/* Hero Section */}
         <section className="mb-10 sm:mb-14 md:mb-16">
           <HeaderSectionV2 />
@@ -90,11 +90,11 @@ export default function Home() {
         <section className="bg-white py-10 sm:py-12 shadow-inner">
           <LocateUs />
         </section>
-      </main>
 
-      <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 mb-10 sm:mb-16">
-        <GoogleAd />
-      </section>
+        <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 mb-10 sm:mb-16">
+          <GoogleAd />
+        </section>
+      </main>
 
       {/* Footer */}
       <Footer />

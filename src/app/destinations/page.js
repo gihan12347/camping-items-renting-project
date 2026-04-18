@@ -12,7 +12,7 @@ export default function Home() {
       <NavBar activeLink="Destinations" />
 
       {/* Main Wrapper */}
-      <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 pt-[calc(4rem+1.5vh)] sm:pt-[calc(5rem+2vh)]">
+      <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 pt-[calc(6.25rem+1.5rem+env(safe-area-inset-top,0px))]">
         {/* Banner Section */}
         <div className="mb-8 sm:mb-12 md:mb-16">
           <Banner />
