@@ -19,11 +19,12 @@ export default function Home() {
       {/* Navigation Bar */}
       <NavBar key={cartUpdated} activeLink="Gear Rentals" />
 
-      {/* Main Wrapper */}
-      <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 pt-[calc(6.25rem+1.5rem+env(safe-area-inset-top,0px))]">
-        {/* Banner Section */}
-        <div className="mb-8 sm:mb-12 md:mb-16">
-          <Banner />
+      {/* Main: pt-0; banner wrapper uses same emerald as Banner so no white strip under fixed nav */}
+      <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 pt-0">
+        <div className="bg-gradient-to-r from-emerald-800 to-emerald-600 pt-[calc(6.25rem+env(safe-area-inset-top,0px))]">
+          <div className="mb-8 sm:mb-12 md:mb-16">
+            <Banner />
+          </div>
         </div>
 
         {/* Product Grid Section */}

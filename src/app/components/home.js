@@ -28,9 +28,9 @@ export default function Home() {
       <NavBar key={cartUpdated} />
 
       {/* Main Wrapper */}
-      <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 pt-[calc(6.25rem+1.5rem+env(safe-area-inset-top,0px))]">
-        {/* Hero Section */}
-        <section className="mb-10 sm:mb-14 md:mb-16">
+      {/* Hero clears fixed nav with dark pt so main’s white gradient never shows between nav and video */}
+      <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 pt-0">
+        <section className="mb-10 bg-zinc-950 pt-[calc(6.25rem+env(safe-area-inset-top,0px))] sm:mb-14 md:mb-16">
           <HeaderSectionV2 />
         </section>
 

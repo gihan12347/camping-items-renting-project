@@ -11,11 +11,11 @@ export default function Home() {
       {/* Navigation Bar */}
       <NavBar activeLink="Destinations" />
 
-      {/* Main Wrapper */}
-      <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 pt-[calc(6.25rem+1.5rem+env(safe-area-inset-top,0px))]">
-        {/* Banner Section */}
-        <div className="mb-8 sm:mb-12 md:mb-16">
-          <Banner />
+      <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 pt-0">
+        <div className="bg-gradient-to-r from-emerald-800 to-emerald-600 pt-[calc(6.25rem+env(safe-area-inset-top,0px))]">
+          <div className="mb-8 sm:mb-12 md:mb-16">
+            <Banner />
+          </div>
         </div>
 
         {/* Image Gallery Section */}

@@ -24,11 +24,12 @@ export default function BlogShell({ children }) {
     <>
       <NavBar activeLink="Blogs" />
 
-      {/* pt matches navbar: h-1 accent + h-24 row (6.25rem) + gap; was 4–5rem and let content/ads sit under fixed header */}
-      <main className="min-h-screen bg-gradient-to-b from-white via-emerald-50/30 to-gray-100 pt-[calc(6.25rem+1.5rem+env(safe-area-inset-top,0px))]">
-        <div className="mx-auto w-full max-w-7xl px-4 pb-12 pt-5 sm:px-6 sm:pb-16 sm:pt-7 lg:px-8 lg:pt-10">
-          {/* Tablet & phone: horizontal guide picker */}
-          <div className="mb-8 lg:hidden">
+      {/* pt-0 on main: nav clearance lives on emerald strip so from-white gradient never shows under fixed nav */}
+      <main className="min-h-screen bg-gradient-to-b from-white via-emerald-50/30 to-gray-100 pt-0">
+        <div className="bg-emerald-50 pt-[calc(6.25rem+env(safe-area-inset-top,0px))]">
+          <div className="mx-auto w-full max-w-7xl px-4 pb-12 pt-5 sm:px-6 sm:pb-16 sm:pt-7 lg:px-8 lg:pt-10">
+            {/* Tablet & phone: horizontal guide picker */}
+            <div className="mb-8 lg:hidden">
             <div className="flex items-end justify-between gap-3">
               <p className="text-xs font-semibold uppercase tracking-wider text-emerald-800">
                 Camping guides
@@ -165,6 +166,7 @@ export default function BlogShell({ children }) {
 
             <div className="min-w-0 flex-1">{children}</div>
           </div>
+        </div>
         </div>
       </main>
 
