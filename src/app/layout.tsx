@@ -110,6 +110,14 @@ export default function RootLayout({
       <body
         className={`${sans.variable} ${mono.variable} font-sans antialiased bg-white text-neutral-900 min-h-dvh overflow-x-hidden selection:bg-emerald-200/60 selection:text-emerald-950`}
       >
+        {/* AdSense: paste the async loader in <body> (see Google “Where to place ad unit code”). */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2010341405700903"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-05QERYB3BS"
@@ -123,14 +131,6 @@ export default function RootLayout({
             gtag('config', 'G-05QERYB3BS');
           `}
         </Script>
-
-        {/* Google AdSense — matches: async loader + crossorigin; client ca-pub-2010341405700903 */}
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2010341405700903"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
 
         {/* Structured Data for Global Business */}
         <Script

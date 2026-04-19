@@ -1,14 +1,15 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-/** nature-nest-camping — AdSense account / ad unit (ca-pub-2010341405700903 / 9800205682) */
+/** nature-nest-camping — ca-pub-2010341405700903 / 9800205682 */
 const AD_CLIENT = "ca-pub-2010341405700903";
 const AD_SLOT = "9800205682";
 
 /**
- * Ad unit for use inside the page body. The global loader script lives in `layout.tsx`
- * (`pagead/js/adsbygoogle.js?client=...`), per Google’s requirement that the script and
- * `<ins class="adsbygoogle">` + `push({})` appear in the document body.
+ * Manual ad unit: `<ins class="adsbygoogle">` + `(adsbygoogle=[]).push({})` in the page
+ * body only (Google: do not place ad unit markup outside `<body>`). The async loader
+ * script is in `layout.tsx`. Wrap units in a centered container like Google’s
+ * `<div align="center">` example — we use flex + text-center for the same effect.
  *
  * @param {{ className?: string }} props
  */
@@ -59,17 +60,19 @@ export default function GoogleAd({ className = "" }) {
   return (
     <div
       ref={containerRef}
-      className={`relative z-0 isolate mx-auto flex w-full max-w-full justify-center overflow-hidden ${className}`}
+      className={`relative z-0 isolate w-full max-w-full overflow-hidden text-center ${className}`}
     >
-      {/* nature-nest-camping — matches AdSense unit snippet */}
-      <ins
-        className="adsbygoogle"
-        style={{ display: "block" }}
-        data-ad-client={AD_CLIENT}
-        data-ad-slot={AD_SLOT}
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      />
+      {/* nature-nest-camping — responsive display ad (not the sample 728×90 dimensions) */}
+      <div className="mx-auto flex w-full max-w-full justify-center">
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client={AD_CLIENT}
+          data-ad-slot={AD_SLOT}
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
+      </div>
     </div>
   );
 }
