@@ -3,24 +3,21 @@ import BlogShell from "../components/BlogShell.js";
 export const metadata = {
   metadataBase: new URL("https://naturenestcamping.com"),
   title:
-    "Sri Lanka Camping Guide for USA & Europe Travelers | Beach & Mountains | Nature Nest Camping",
+    "Sri Lanka Camping Guide | Beach, Hills & Gear | Nature Nest",
   description:
-    "Discover Sri Lanka’s best beach and mountain camping areas for travelers from the USA and Europe: south coast, hill country, and how to rent camping gear in Sri Lanka. Plan tent rental, outdoor equipment hire, and a compact island adventure.",
+    "Camping in Sri Lanka: beach, river & mountain areas, budget tent rental, and gear hire for USA & Europe travelers—south coast, Ella, Mirissa, and trip planning tips.",
   keywords: [
-    "Sri Lanka camping USA travelers",
-    "Sri Lanka camping Europe",
-    "Sri Lanka beach camping",
+    "camping in Sri Lanka",
+    "Sri Lanka camping guide",
+    "river camping Sri Lanka",
+    "beach camping Sri Lanka",
+    "budget camping packages Sri Lanka",
     "Sri Lanka mountain camping",
     "Ella camping Sri Lanka",
     "south coast Sri Lanka camping",
     "camping gear rental Sri Lanka",
-    "rent camping tent online",
-    "outdoor camping equipment hire",
-    "camping gear USA travel",
-    "best camping tents for beginners",
-    "camping in Sri Lanka for tourists",
     "tent rental Sri Lanka",
-    "Nuwara Eliya camping",
+    "camping in Sri Lanka for tourists",
     "Nature Nest Camping",
   ],
   alternates: {
@@ -28,9 +25,9 @@ export const metadata = {
   },
   openGraph: {
     title:
-      "Sri Lanka’s Beautiful Camping Areas | Guide for USA & Europe | Nature Nest Camping",
+      "Sri Lanka Camping Guide | Beach, Hills & Rentals | Nature Nest",
     description:
-      "Beach and hill-country camping in Sri Lanka—why US and European travelers love it, where to go, and how to rent quality outdoor gear on the island.",
+      "Where to go camping in Sri Lanka, beach vs hill country, budget gear rental, and routes for USA & Europe travelers.",
     url: "https://naturenestcamping.com/blogs",
     siteName: "Nature Nest Camping",
     locale: "en_US",
@@ -47,9 +44,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sri Lanka Camping | USA & Europe Traveler Guide",
+    title: "Sri Lanka Camping Guide | Nature Nest",
     description:
-      "Beach + mountain camping areas, flights from the US & EU, and gear rental in Sri Lanka.",
+      "Beach, river & hill camping in Sri Lanka—routes, seasons, and tent rental tips for international travelers.",
   },
   robots: { index: true, follow: true },
 };

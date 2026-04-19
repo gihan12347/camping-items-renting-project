@@ -2,29 +2,29 @@ import HomeClient from "./components/home.js";
 
 export const metadata = {
   title:
-    "Nature Nest Camping | Camping Equipment for Rent in Sri Lanka, USA & Europe",
+    "Camping in Sri Lanka | Rent Tents & Outdoor Gear | Nature Nest",
   description:
-    "Nature Nest Camping (Nature Nest / Natures Nest) offers camping equipment for rent, camp tents for rent, and outdoor essentials for travelers in Sri Lanka, the USA, and Europe.",
+    "Camping in Sri Lanka: rent tents, stoves & gear in Galle, Mirissa & south coast. Budget camping packages, beach & river trips—outdoor hire for USA & Europe travelers.",
   keywords: [
-    "nature nest",
-    "nature nest camping",
-    "naturenest",
-    "nest camping",
-    "nature and nest",
-    "camping stove near me",
-    "natures nest",
-    "camping equipment for rent",
-    "nature's nest",
+    "camping in Sri Lanka",
+    "Sri Lanka camping",
+    "river camping Sri Lanka",
+    "beach camping Sri Lanka",
+    "budget camping packages Sri Lanka",
+    "tent rental Sri Lanka",
+    "camping gear rental Sri Lanka",
+    "Nature Nest Camping",
     "camp tent for rent",
+    "south coast camping Sri Lanka",
   ],
   alternates: {
     canonical: "https://naturenestcamping.com/",
   },
   openGraph: {
     title:
-      "Nature Nest Camping | Camping Equipment for Rent in Sri Lanka, USA & Europe",
+      "Camping in Sri Lanka | Tent & Gear Rental | Nature Nest Camping",
     description:
-      "Book camping gear, camp tents, and outdoor equipment from Nature Nest Camping for adventures across Sri Lanka and international travelers from the USA and Europe.",
+      "Rent quality camping equipment in Sri Lanka—south coast & hill country. Ideal for USA & Europe travelers planning beach, river & mountain trips.",
     url: "https://naturenestcamping.com",
     siteName: "Nature Nest Camping",
     locale: "en_US",
@@ -52,6 +52,8 @@ export default function Page() {
     name: "Nature Nest Camping",
     alternateName: ["Nature Nest", "Naturenest", "Nature's Nest", "Natures Nest"],
     url: "https://naturenestcamping.com/",
+    description:
+      "Camping gear rental in Sri Lanka—tents, stoves & outdoor equipment for beach, river & hill-country trips.",
     inLanguage: ["en-US", "en-GB", "en-LK"],
     potentialAction: {
       "@type": "SearchAction",

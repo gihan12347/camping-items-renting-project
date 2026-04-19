@@ -133,7 +133,7 @@ export default function ImageGallery() {
               <div className="aspect-[4/5] overflow-hidden">
                 <img
                   src={image.url}
-                  alt={'Nature Nest ' + image.title}
+                  alt={`Sri Lanka camping — ${image.title} (${image.category}) | Nature Nest`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
@@ -234,7 +234,7 @@ export default function ImageGallery() {
             >
               <img
                 src={selectedImage.url}
-                alt={selectedImage.title}
+                alt={`${selectedImage.title} — ${selectedImage.category} camping in Sri Lanka | Nature Nest gallery`}
                 className="max-w-full max-h-[85vh] object-contain transition-transform duration-300 rounded-2xl shadow-2xl"
                 style={{ transform: `scale(${zoom})` }}
               />

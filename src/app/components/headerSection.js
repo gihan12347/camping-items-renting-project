@@ -40,7 +40,7 @@ export default function Hero() {
           <Image
             key={src}
             src={src}
-            alt={`Camping Background ${index + 1}`}
+            alt={`Sri Lanka camping — south coast nature scene ${index + 1} | Nature Nest`}
             layout="fill"
             objectFit="cover"
             priority={index === 0}

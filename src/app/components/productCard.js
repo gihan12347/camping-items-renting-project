@@ -46,7 +46,7 @@ export default function ProductCard({ product, onAddToCart }) {
         {imageUrl ? (
           <Image
             src={imageUrl}
-            alt={name}
+            alt={`${name} — camping gear rental in Sri Lanka | Nature Nest`}
             layout="fill"
             objectFit="contain"
             className="transition-transform duration-500 group-hover:scale-105 p-4"

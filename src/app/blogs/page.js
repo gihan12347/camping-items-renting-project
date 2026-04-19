@@ -303,6 +303,49 @@ export default function BlogsPage() {
               />
             </figure>
 
+            <nav
+              className="not-prose my-10 rounded-xl border border-emerald-200/80 bg-emerald-50/50 px-4 py-5 sm:px-6"
+              aria-label="Related camping in Sri Lanka guides"
+            >
+              <p className="mb-3 text-sm font-semibold text-emerald-900">
+                Related guides
+              </p>
+              <ul className="flex flex-col gap-2 text-[0.9375rem] text-emerald-900 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2">
+                <li>
+                  <Link
+                    href="/blogs/beach-camping-sri-lanka"
+                    className="text-emerald-800 underline decoration-emerald-400/80 underline-offset-2 hover:text-emerald-950"
+                  >
+                    Beach &amp; coast camping in Sri Lanka
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blogs/mountain-camping-sri-lanka"
+                    className="text-emerald-800 underline decoration-emerald-400/80 underline-offset-2 hover:text-emerald-950"
+                  >
+                    Mountain &amp; hill-country camping
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blogs/rent-camping-gear-sri-lanka"
+                    className="text-emerald-800 underline decoration-emerald-400/80 underline-offset-2 hover:text-emerald-950"
+                  >
+                    Rent camping gear in Sri Lanka
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/gear-rental"
+                    className="text-emerald-800 underline decoration-emerald-400/80 underline-offset-2 hover:text-emerald-950"
+                  >
+                    Browse gear rentals
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+
             <h2 id="faq" className="mt-10 scroll-mt-28 text-2xl font-bold text-gray-900">
               Quick FAQ
             </h2>

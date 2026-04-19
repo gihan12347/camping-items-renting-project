@@ -40,6 +40,8 @@ export default function Hero() {
           muted
           loop
           playsInline
+          title="South coast beach camping in Sri Lanka — Nature Nest Camping gear rental"
+          aria-label="Video: South coast beach and ocean in Sri Lanka for camping and outdoor trips with Nature Nest Camping"
         />
 
         {/* Gradient Overlay — slightly stronger for text on bright waves */}
