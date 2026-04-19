@@ -110,8 +110,9 @@ export default function RootLayout({
       <body
         className={`${sans.variable} ${mono.variable} font-sans antialiased bg-white text-neutral-900 min-h-dvh overflow-x-hidden selection:bg-emerald-200/60 selection:text-emerald-950`}
       >
-        {/* AdSense: paste the async loader in <body> (see Google “Where to place ad unit code”). */}
+        {/* AdSense loader once in <body>; `id` avoids duplicate injection by Next.js */}
         <Script
+          id="adsbygoogle-js"
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2010341405700903"
           crossOrigin="anonymous"
