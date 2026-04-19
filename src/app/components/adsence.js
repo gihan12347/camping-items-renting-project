@@ -61,9 +61,10 @@ export default function GoogleAd({ className = "" }) {
       ref={containerRef}
       className={`relative z-0 isolate mx-auto flex w-full max-w-full justify-center overflow-hidden ${className}`}
     >
+      {/* nature-nest-camping — matches AdSense unit snippet */}
       <ins
         className="adsbygoogle"
-        style={{ display: "block", width: "100%", minHeight: "90px" }}
+        style={{ display: "block" }}
         data-ad-client={AD_CLIENT}
         data-ad-slot={AD_SLOT}
         data-ad-format="auto"

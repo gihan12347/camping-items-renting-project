@@ -39,6 +39,10 @@ export default function BeachCampingPage() {
         />
       </figure>
 
+      <div className="not-prose my-8 sm:my-10">
+        <GoogleAd />
+      </div>
+
       <div className="prose prose-gray max-w-none prose-a:text-emerald-700">
         <p className="text-gray-700 leading-relaxed">
           Humidity and sudden rain mean a ventilated tent and a groundsheet matter as

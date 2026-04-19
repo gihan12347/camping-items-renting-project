@@ -124,7 +124,7 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Google AdSense */}
+        {/* Google AdSense — matches: async loader + crossorigin; client ca-pub-2010341405700903 */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2010341405700903"

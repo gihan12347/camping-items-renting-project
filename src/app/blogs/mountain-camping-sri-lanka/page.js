@@ -40,6 +40,10 @@ export default function MountainCampingPage() {
         />
       </figure>
 
+      <div className="not-prose my-8 sm:my-10">
+        <GoogleAd />
+      </div>
+
       <div className="prose prose-gray max-w-none prose-a:text-emerald-700">
         <p className="text-gray-700 leading-relaxed">
           Trains and tuk-tuks make ridge viewpoints reachable without a car culture

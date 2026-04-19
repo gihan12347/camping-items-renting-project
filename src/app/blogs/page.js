@@ -93,6 +93,10 @@ export default function BlogsPage() {
             </figcaption>
           </figure>
 
+          <div className="not-prose my-8 sm:my-10">
+            <GoogleAd />
+          </div>
+
           <div
             className="prose prose-gray max-w-none prose-headings:scroll-mt-28 prose-p:text-[0.9375rem] sm:prose-p:text-base prose-h2:text-xl sm:prose-h2:text-2xl prose-a:text-emerald-700 prose-a:no-underline hover:prose-a:underline"
             itemProp="articleBody"
@@ -163,6 +167,10 @@ export default function BlogsPage() {
               tent, sand pegs where needed, and a sleep system matched to warm, humid
               air—not a heavy European winter bag unless you are heading uphill.
             </p>
+
+            <div className="not-prose my-10 rounded-xl border border-gray-200/80 bg-gray-50/60 p-4 sm:p-5">
+              <GoogleAd />
+            </div>
 
             <h2
               id="mountain-camping"
@@ -295,10 +303,6 @@ export default function BlogsPage() {
               />
             </figure>
 
-            <div className="not-prose my-10 rounded-xl border border-gray-200/80 bg-white/90 p-4 shadow-sm">
-              <GoogleAd />
-            </div>
-
             <h2 id="faq" className="mt-10 scroll-mt-28 text-2xl font-bold text-gray-900">
               Quick FAQ
             </h2>
@@ -333,6 +337,10 @@ export default function BlogsPage() {
                 </dd>
               </div>
             </dl>
+
+            <div className="not-prose my-10 rounded-xl border border-gray-200/80 bg-white/90 p-4 shadow-sm sm:p-5">
+              <GoogleAd />
+            </div>
 
             <div className="not-prose mt-12 rounded-2xl bg-emerald-900 px-6 py-8 text-center text-emerald-50 shadow-lg">
               <p className="text-lg font-semibold">
