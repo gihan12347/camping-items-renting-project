@@ -1,71 +1,69 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 
-/** nature-nest-camping — matches AdSense unit (ca-pub-2010341405700903 / 9800205682) */
+/** nature-nest-camping — AdSense account / ad unit (ca-pub-2010341405700903 / 9800205682) */
 const AD_CLIENT = "ca-pub-2010341405700903";
 const AD_SLOT = "9800205682";
 
-export default function GoogleAd() {
-  const [loaded, setLoaded] = useState(false);
-  const adRef = useRef(null);
+/**
+ * Ad unit for use inside the page body. The global loader script lives in `layout.tsx`
+ * (`pagead/js/adsbygoogle.js?client=...`), per Google’s requirement that the script and
+ * `<ins class="adsbygoogle">` + `push({})` appear in the document body.
+ *
+ * @param {{ className?: string }} props
+ */
+export default function GoogleAd({ className = "" }) {
+  const containerRef = useRef(null);
+  const pushedRef = useRef(false);
 
   useEffect(() => {
-    if (!adRef.current) return;
+    const container = containerRef.current;
+    if (!container) return;
 
-    const loadAd = () => {
+    const pushAd = () => {
+      if (pushedRef.current) return;
+      pushedRef.current = true;
       try {
         (window.adsbygoogle = window.adsbygoogle || []).push({});
       } catch (err) {
+        pushedRef.current = false;
         console.error("AdSense load error:", err);
       }
     };
 
-    // Check if container has width
-    const checkWidth = () => {
-      const container = adRef.current;
-      if (container && container.offsetWidth > 0) {
-        loadAd();
-
-        // Detect when iframe loads
-        const checkIframe = setInterval(() => {
-          if (container.querySelector("iframe")) {
-            setLoaded(true);
-            clearInterval(checkIframe);
-          }
-        }, 500);
-      } else {
-        // Retry after short delay if width=0
-        setTimeout(checkWidth, 100);
+    const tryWhenSized = (attempts = 0) => {
+      const el = containerRef.current;
+      if (!el) return;
+      if (el.offsetWidth > 0) {
+        pushAd();
+        return;
+      }
+      if (attempts < 50) {
+        setTimeout(() => tryWhenSized(attempts + 1), 100);
       }
     };
 
-    // Optional: lazy load only when visible
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        checkWidth();
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        tryWhenSized();
         observer.disconnect();
-      }
-    });
+      },
+      { rootMargin: "200px" }
+    );
 
-    observer.observe(adRef.current);
-
+    observer.observe(container);
     return () => observer.disconnect();
   }, []);
 
   return (
     <div
-      ref={adRef}
-      className="relative z-0 isolate max-w-full overflow-hidden"
-      style={{
-        width: "100%",
-        minHeight: loaded ? "auto" : "0",
-        display: loaded ? "block" : "none",
-      }}
+      ref={containerRef}
+      className={`relative z-0 isolate mx-auto flex w-full max-w-full justify-center overflow-hidden ${className}`}
     >
-      {/* nature-nest-camping */}
       <ins
         className="adsbygoogle"
-        style={{ display: "block" }}
+        style={{ display: "block", width: "100%", minHeight: "90px" }}
         data-ad-client={AD_CLIENT}
         data-ad-slot={AD_SLOT}
         data-ad-format="auto"
